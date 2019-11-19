@@ -1,2 +1,8 @@
-<%= image.description%><%= link_to 'Edit', edit_image_path(image) %><br>
-<%= image.season%><%= link_to 'Edit', edit_image_path(image) %><br>
+<%= image.description%>
+<%= link_to 'Edit', edit_image_path(image) %>
+<%= link_to 'Destroy', image, method: :delete, data: {confirm: 'sure?' %>
+<br>
+<%= image.season%>
+<%= link_to 'Edit', edit_image_path(image) %>
+<%= link_to 'Destroy', image, method: :delete, data: {confirm: 'sure?'} %>
+<br>
