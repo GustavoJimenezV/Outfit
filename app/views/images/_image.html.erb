@@ -1,4 +1,10 @@
-<%= image.description%>
-<%= image.season%>
-<%= link_to 'Edit', edit_image_path(image) %>
-<br>
+<div class="col">
+  <figure class="figure">
+  <img src="..." class="figure-img img-fluid rounded" >
+  <figcaption class="figure-caption">
+      <%= image.description%>
+      <%= image.season%>
+      <%= link_to 'Edit', edit_image_path(image) %>
+  </figcaption>
+  </figure>
+</div>

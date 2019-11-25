@@ -1,3 +1,4 @@
+<div class="for-grop">
 <%= form_for @image do |f| %>
     <%= f.label :description%> <br>
     <%= f.text_field :description%><br>
@@ -5,6 +6,6 @@
     <%= f.label :season%> <br>
     <%= f.text_field :season%><br>
 
-
-    <%= f.submit%>
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>
+</div>
