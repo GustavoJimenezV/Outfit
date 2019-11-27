@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'carrierwave'
 #PROCESAMIENTOS EN LAS IMAGENES
 gem 'mini_magick'
+#Crear cuentas
+gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use postgresql as the database for Active Record
