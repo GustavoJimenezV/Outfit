@@ -1,0 +1,10 @@
+es:
+    activerecord:
+        models:
+            image: 'Imagen'
+        attributes:
+            image:
+                description: 'Descripción'
+                season: 'Temporada'
+                picture: 'Imagen'
+                climate: 'Clima'

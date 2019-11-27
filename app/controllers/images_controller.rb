@@ -35,7 +35,7 @@ class ImagesController < ApplicationController
     end
 
     def image_params
-        params.require(:image).permit :description, :season , :picture
+        params.require(:image).permit :description, :season , :picture, :climate
     end
 
     def set_image

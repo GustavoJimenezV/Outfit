@@ -1,23 +1,22 @@
 
 <div class="for-group">
-<%= form_for @image do |f| %>
+<%= form_for @image, builder: CustomFormBuilder do |f| %>
+<%= f.form_error%>
     <%= f.label :description%> <br>
     <%= f.text_field :description%><br>
-<%-if @image.errors[:description].any? %>
-<span class="badge badge-pill badge-danger">
-    <%= @image.errors[:description].first%>
-</span>
-<%end%>
+    <%= f.field_error :description%>
+
     <%= f.label :season%> <br>
     <%= f.text_field :season%><br>
-<%-if @image.errors[:season].any? %>
-    <span class="badge badge-pill badge-danger">
-        <%= @image.errors[:season].first%>
-    </span>
-<%end%>
+    <%= f.field_error :season%>
+
+    <%= f.label :climate%> <br>
+    <%= f.text_field :climate%><br>
+    <%= f.field_error :climate%>
 
     <%= f.label :picture %> <br>
     <%= f.file_field :picture%><br>
+    <br>
 
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>

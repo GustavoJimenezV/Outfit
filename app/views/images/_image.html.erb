@@ -4,8 +4,9 @@
   <figcaption class="figure-caption">
       <%= image.description%>
       <%= image.season%>
-      <%= link_to 'Edit', edit_image_path(image) %>
-      <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>      
+      <%= image.climate%>
+      <%= link_to t('.edit_link'), edit_image_path(image) %>
+      <%= link_to t('.remove_link'), image, method: :delete, data: { confirm: 'Are you sure?' } %>
   </figcaption>
   </figure>
 </div>
