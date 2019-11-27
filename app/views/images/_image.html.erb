@@ -1,10 +1,11 @@
 <div class="col">
   <figure class="figure">
-  <img src="..." class="figure-img img-fluid rounded" >
+    <%= image_tag image.picture.thumb.url, class: 'figure-img img_fluid rounded'%>
   <figcaption class="figure-caption">
       <%= image.description%>
       <%= image.season%>
       <%= link_to 'Edit', edit_image_path(image) %>
+      <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>      
   </figcaption>
   </figure>
 </div>
