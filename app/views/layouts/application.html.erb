@@ -29,25 +29,25 @@
                 <%= link_to t('.Subir'), new_image_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to t('.CreateOutfit'), new_image_path, class: "nav-link" %>
+                <%= link_to t('.CreateOutfit'), new_desing_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                  <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: "nav-link" %>
               </li>
             </ul>
           </div>
         </nav>
         </div>
 
-        <li class="nav-item">
-            <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
 
         <%else%>
 
         <li class="nav-item">
-            <%= link_to 'Iniciar', new_user_session_path , class: "nav-link"%>
+            <%= link_to 'Iniciar', new_user_session_path , class: "nav-link",:class => 'btn btn-dark'%>
         </li>
 
         <li class="nav-item">
-            <%= link_to 'Registrarme', new_user_registration_path, class: "nav-link" %>
+            <%= link_to 'Registrarme', new_user_registration_path, class: "nav-link", :class => 'btn btn-dark' %>
         </li>
         <%end%>
     </ul>

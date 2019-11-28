@@ -1,0 +1,11 @@
+<%=form_for :desing, url: desings_path do |d|%>
+    <p>En que temporada estas?</p>
+    <%= d.label :season %>
+    <%= d.text_field :season %>
+    <br>
+    <p>Cual es el clima del dia de hoy?</p>
+    <%= d.label :climate %>
+    <%= d.text_field :climate %>
+    <br>
+    <%= d.submit 'Consultar Outfit', :class => 'btn btn-primary' %>
+<%end%>
