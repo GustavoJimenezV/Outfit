@@ -26,11 +26,10 @@
                 <%= link_to 'Home', home_index_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Subir</a>
-
+                <%= link_to t('.Subir'), new_image_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Crear Outfit</a>
+                <%= link_to t('.CreateOutfit'), new_image_path, class: "nav-link" %>
               </li>
             </ul>
           </div>
