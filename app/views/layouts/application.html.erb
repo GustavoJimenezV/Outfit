@@ -12,22 +12,49 @@
 
   <body>
 
-    <ul class="nav justify-content-end">
+      <ul class="nav justify-content-end">
         <%- if user_signed_in? %>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Start Outfit</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <%= link_to 'Home', home_index_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Subir</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Crear Outfit</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+
         <li class="nav-item">
-            <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+            <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
+
         <%else%>
 
         <li class="nav-item">
-            <%= link_to 'Iniciar', new_user_session_path %>
+            <%= link_to 'Iniciar', new_user_session_path , class: "nav-link"%>
         </li>
 
         <li class="nav-item">
-            <%= link_to 'Registrarme', new_user_registration_path %>
+            <%= link_to 'Registrarme', new_user_registration_path, class: "nav-link" %>
         </li>
         <%end%>
     </ul>
+
+
+
       <div class="container">
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
